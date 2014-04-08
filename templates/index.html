@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>melton.li &mdash; muh url shortener</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic">
+    <link rel="shortcut icon" href="/static/images/favicon.png">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+      body {
+        font-family: "Open Sans", Times, "Times New Roman", serif; 
+      }
+      h1 {
+        font-family: "Montserrat", Impact, sans-serif;
+      }
+      #short-url a {
+        font-size: 31.5px;
+        line-height: 40px;
+        font-weight: bold;
+      }
+      .search {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12 search">
+          <h1>URL shortener</h1>
+          <form class="form-inline" action="" id="shorten" novalidate>
+            <div class="control-group">
+              <div class="controls">
+                <input type="url" class="input-xxlarge" id="url" name="url" placeholder="URL goes here">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button type="submit" class="btn btn-large btn-inverse">Shorten it</button>
+              </div>
+            </div>
+          </form>
+          <div class="hide" id="short-url">
+            <p><a rel="tooltip"></a></p>
+            <p><small></small></p>
+          </div>
+          <div class="alert alert-error hide search" id="error">
+            Could not shorten URL. That's all I know.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
+    <script src="/static/javascripts/app.min.js"></script>
+  </body>
+</html>
